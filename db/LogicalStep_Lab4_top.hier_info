@@ -23,22 +23,22 @@ sw[4] => motion:inst_motion_controller.x_input[0]
 sw[5] => motion:inst_motion_controller.x_input[1]
 sw[6] => motion:inst_motion_controller.x_input[2]
 sw[7] => motion:inst_motion_controller.x_input[3]
-leds[0] << motion:inst_motion_controller.system_fault
-leds[1] << extend:inst_extension_controller.status
-leds[2] << <GND>
-leds[3] << grapple:inst_grapple_controller.status
-leds[4] << extend:inst_extension_controller.position[0]
-leds[5] << extend:inst_extension_controller.position[1]
-leds[6] << extend:inst_extension_controller.position[2]
-leds[7] << extend:inst_extension_controller.position[3]
-leds[8] << U_D_Bin_Counter4bit:inst_counter_y.COUNTER_BITS[0]
-leds[9] << U_D_Bin_Counter4bit:inst_counter_y.COUNTER_BITS[1]
-leds[10] << U_D_Bin_Counter4bit:inst_counter_y.COUNTER_BITS[2]
-leds[11] << U_D_Bin_Counter4bit:inst_counter_y.COUNTER_BITS[3]
-leds[12] << U_D_Bin_Counter4bit:inst_counter_x.COUNTER_BITS[0]
-leds[13] << U_D_Bin_Counter4bit:inst_counter_x.COUNTER_BITS[1]
-leds[14] << U_D_Bin_Counter4bit:inst_counter_x.COUNTER_BITS[2]
-leds[15] << U_D_Bin_Counter4bit:inst_counter_x.COUNTER_BITS[3]
+leds[0] <= motion:inst_motion_controller.system_fault
+leds[1] <= extend:inst_extension_controller.status
+leds[2] <= <GND>
+leds[3] <= grapple:inst_grapple_controller.status
+leds[4] <= extend:inst_extension_controller.position[0]
+leds[5] <= extend:inst_extension_controller.position[1]
+leds[6] <= extend:inst_extension_controller.position[2]
+leds[7] <= extend:inst_extension_controller.position[3]
+leds[8] <= U_D_Bin_Counter4bit:inst_counter_y.COUNTER_BITS[0]
+leds[9] <= U_D_Bin_Counter4bit:inst_counter_y.COUNTER_BITS[1]
+leds[10] <= U_D_Bin_Counter4bit:inst_counter_y.COUNTER_BITS[2]
+leds[11] <= U_D_Bin_Counter4bit:inst_counter_y.COUNTER_BITS[3]
+leds[12] <= U_D_Bin_Counter4bit:inst_counter_x.COUNTER_BITS[0]
+leds[13] <= U_D_Bin_Counter4bit:inst_counter_x.COUNTER_BITS[1]
+leds[14] <= U_D_Bin_Counter4bit:inst_counter_x.COUNTER_BITS[2]
+leds[15] <= U_D_Bin_Counter4bit:inst_counter_x.COUNTER_BITS[3]
 
 
 |LogicalStep_Lab4_top|motion:inst_motion_controller

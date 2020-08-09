@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LogicalStep_Lab4_top
-Wed Jul 29 13:00:34 2020
+Sun Aug 09 14:30:58 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 29 13:00:34 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun Aug 09 14:30:58 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; LogicalStep_Lab4_top                        ;
 ; Top-level Entity Name              ; LogicalStep_Lab4_top                        ;
@@ -330,117 +330,117 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Wed Jul 29 13:00:25 2020
+    Info: Processing started: Sun Aug 09 14:30:50 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LogicalStep_Lab4 -c LogicalStep_Lab4_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file u_d_bin_counter4bit.vhd
-    Info (12022): Found design unit 1: U_D_Bin_Counter4bit-one File: C:/Documents/ECE124/Lab4_constructed/U_D_Bin_Counter4bit.vhd Line: 17
-    Info (12023): Found entity 1: U_D_Bin_Counter4bit File: C:/Documents/ECE124/Lab4_constructed/U_D_Bin_Counter4bit.vhd Line: 7
+    Info (12022): Found design unit 1: U_D_Bin_Counter4bit-one File: C:/Documents/ECE124/Lab4_constructed/U_D_Bin_Counter4bit.vhd Line: 15
+    Info (12023): Found entity 1: U_D_Bin_Counter4bit File: C:/Documents/ECE124/Lab4_constructed/U_D_Bin_Counter4bit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file shift_reg_4bit.vhd
-    Info (12022): Found design unit 1: shift_reg_4bit-one File: C:/Documents/ECE124/Lab4_constructed/shift_reg_4bit.vhd Line: 18
-    Info (12023): Found entity 1: shift_reg_4bit File: C:/Documents/ECE124/Lab4_constructed/shift_reg_4bit.vhd Line: 7
+    Info (12022): Found design unit 1: shift_reg_4bit-one File: C:/Documents/ECE124/Lab4_constructed/shift_reg_4bit.vhd Line: 16
+    Info (12023): Found entity 1: shift_reg_4bit File: C:/Documents/ECE124/Lab4_constructed/shift_reg_4bit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file motion.vhd
-    Info (12022): Found design unit 1: motion-coordinates File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 22
-    Info (12023): Found entity 1: motion File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 6
+    Info (12022): Found design unit 1: motion-coordinates File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 21
+    Info (12023): Found entity 1: motion File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file logicalstep_lab4_top.vhd
-    Info (12022): Found design unit 1: LogicalStep_Lab4_top-Circuit File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 17
-    Info (12023): Found entity 1: LogicalStep_Lab4_top File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 6
+    Info (12022): Found design unit 1: LogicalStep_Lab4_top-Circuit File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 16
+    Info (12023): Found entity 1: LogicalStep_Lab4_top File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file grapple.vhd
-    Info (12022): Found design unit 1: grapple-grappler File: C:/Documents/ECE124/Lab4_constructed/grapple.vhd Line: 15
-    Info (12023): Found entity 1: grapple File: C:/Documents/ECE124/Lab4_constructed/grapple.vhd Line: 6
+    Info (12022): Found design unit 1: grapple-grappler File: C:/Documents/ECE124/Lab4_constructed/grapple.vhd Line: 14
+    Info (12023): Found entity 1: grapple File: C:/Documents/ECE124/Lab4_constructed/grapple.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file extend.vhd
-    Info (12022): Found design unit 1: extend-arm File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 17
-    Info (12023): Found entity 1: extend File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 6
+    Info (12022): Found design unit 1: extend-arm File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 16
+    Info (12023): Found entity 1: extend File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file compx4.vhd
-    Info (12022): Found design unit 1: Compx4-dataflow File: C:/Documents/ECE124/Lab4_constructed/Compx4.vhd Line: 12
-    Info (12023): Found entity 1: Compx4 File: C:/Documents/ECE124/Lab4_constructed/Compx4.vhd Line: 6
+    Info (12022): Found design unit 1: Compx4-dataflow File: C:/Documents/ECE124/Lab4_constructed/Compx4.vhd Line: 10
+    Info (12023): Found entity 1: Compx4 File: C:/Documents/ECE124/Lab4_constructed/Compx4.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file compx1.vhd
     Info (12022): Found design unit 1: Compx1-dataflow File: C:/Documents/ECE124/Lab4_constructed/Compx1.vhd Line: 10
     Info (12023): Found entity 1: Compx1 File: C:/Documents/ECE124/Lab4_constructed/Compx1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bidir_shift_reg.vhd
-    Info (12022): Found design unit 1: Bidir_shift_reg-one File: C:/Documents/ECE124/Lab4_constructed/Bidir_shift_reg.vhd Line: 18
-    Info (12023): Found entity 1: Bidir_shift_reg File: C:/Documents/ECE124/Lab4_constructed/Bidir_shift_reg.vhd Line: 7
+    Info (12022): Found design unit 1: Bidir_shift_reg-one File: C:/Documents/ECE124/Lab4_constructed/Bidir_shift_reg.vhd Line: 16
+    Info (12023): Found entity 1: Bidir_shift_reg File: C:/Documents/ECE124/Lab4_constructed/Bidir_shift_reg.vhd Line: 5
 Info (12127): Elaborating entity "LogicalStep_Lab4_top" for the top level hierarchy
-Warning (10873): Using initial value X (don't care) for net "leds[2]" at LogicalStep_Lab4_top.vhd(13) File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 13
-Info (12128): Elaborating entity "motion" for hierarchy "motion:inst_motion_controller" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 101
-Warning (10036): Verilog HDL or VHDL warning at motion.vhd(30): object "coordinate_queued" assigned a value but never read File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 30
-Warning (10492): VHDL Process Statement warning at motion.vhd(120): signal "x_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 120
-Warning (10492): VHDL Process Statement warning at motion.vhd(121): signal "y_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 121
-Warning (10492): VHDL Process Statement warning at motion.vhd(147): signal "x_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at motion.vhd(148): signal "y_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 148
-Warning (10492): VHDL Process Statement warning at motion.vhd(153): signal "sys_fault" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 153
-Warning (10631): VHDL Process Statement warning at motion.vhd(93): inferring latch(es) for signal or variable "x_tgt", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Warning (10631): VHDL Process Statement warning at motion.vhd(93): inferring latch(es) for signal or variable "y_tgt", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Warning (10631): VHDL Process Statement warning at motion.vhd(93): inferring latch(es) for signal or variable "x_que", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Warning (10631): VHDL Process Statement warning at motion.vhd(93): inferring latch(es) for signal or variable "y_que", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Warning (10631): VHDL Process Statement warning at motion.vhd(93): inferring latch(es) for signal or variable "en_x", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Warning (10631): VHDL Process Statement warning at motion.vhd(93): inferring latch(es) for signal or variable "en_y", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Warning (10631): VHDL Process Statement warning at motion.vhd(93): inferring latch(es) for signal or variable "sys_fault", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Warning (10631): VHDL Process Statement warning at motion.vhd(93): inferring latch(es) for signal or variable "en_ext", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Warning (10631): VHDL Process Statement warning at motion.vhd(93): inferring latch(es) for signal or variable "back_to_idle", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "back_to_idle" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "en_ext" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "sys_fault" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "y_que[0]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "y_que[1]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "y_que[2]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "y_que[3]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "x_que[0]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "x_que[1]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "x_que[2]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "x_que[3]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "y_tgt[0]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "y_tgt[1]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "y_tgt[2]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "y_tgt[3]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "x_tgt[0]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "x_tgt[1]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "x_tgt[2]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (10041): Inferred latch for "x_tgt[3]" at motion.vhd(93) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 93
-Info (12128): Elaborating entity "Compx4" for hierarchy "Compx4:inst_compare_x" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 116
-Info (12128): Elaborating entity "Compx1" for hierarchy "Compx4:inst_compare_x|Compx1:inst0" File: C:/Documents/ECE124/Lab4_constructed/Compx4.vhd Line: 28
-Info (12128): Elaborating entity "U_D_Bin_Counter4bit" for hierarchy "U_D_Bin_Counter4bit:inst_counter_x" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 128
-Warning (10492): VHDL Process Statement warning at U_D_Bin_Counter4bit.vhd(29): signal "ud_bin_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/U_D_Bin_Counter4bit.vhd Line: 29
-Warning (10492): VHDL Process Statement warning at U_D_Bin_Counter4bit.vhd(32): signal "ud_bin_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/U_D_Bin_Counter4bit.vhd Line: 32
-Info (12128): Elaborating entity "extend" for hierarchy "extend:inst_extension_controller" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 151
-Warning (10036): Verilog HDL or VHDL warning at extend.vhd(21): object "tgt_pos" assigned a value but never read File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at extend.vhd(43): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 43
-Warning (10492): VHDL Process Statement warning at extend.vhd(56): signal "ext_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 56
-Warning (10492): VHDL Process Statement warning at extend.vhd(63): signal "ext_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 63
-Warning (10492): VHDL Process Statement warning at extend.vhd(79): signal "ext_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 79
-Warning (10492): VHDL Process Statement warning at extend.vhd(84): signal "ext_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 84
-Warning (10631): VHDL Process Statement warning at extend.vhd(40): inferring latch(es) for signal or variable "ext_en", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 40
-Warning (10631): VHDL Process Statement warning at extend.vhd(40): inferring latch(es) for signal or variable "ext_shift", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 40
-Warning (10631): VHDL Process Statement warning at extend.vhd(40): inferring latch(es) for signal or variable "grapple", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 40
-Warning (10631): VHDL Process Statement warning at extend.vhd(40): inferring latch(es) for signal or variable "ext_stat", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 40
-Info (10041): Inferred latch for "ext_stat" at extend.vhd(40) File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 40
-Info (10041): Inferred latch for "grapple" at extend.vhd(40) File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 40
-Info (10041): Inferred latch for "ext_shift" at extend.vhd(40) File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 40
-Info (10041): Inferred latch for "ext_en" at extend.vhd(40) File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 40
-Info (12128): Elaborating entity "shift_reg_4bit" for hierarchy "shift_reg_4bit:inst_extend_shifter" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 164
-Warning (10492): VHDL Process Statement warning at shift_reg_4bit.vhd(32): signal "CLK_EN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/shift_reg_4bit.vhd Line: 32
-Info (12128): Elaborating entity "grapple" for hierarchy "grapple:inst_grapple_controller" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 177
-Warning (10492): VHDL Process Statement warning at grapple.vhd(39): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/grapple.vhd Line: 39
-Warning (13012): Latch extend:inst_extension_controller|ext_shift has unsafe behavior File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 40
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal rst_n File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 10
-Warning (13012): Latch motion:inst_motion_controller|back_to_idle has unsafe behavior File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 31
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal rst_n File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 10
+Warning (10873): Using initial value X (don't care) for net "leds[2]" at LogicalStep_Lab4_top.vhd(12) File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 12
+Info (12128): Elaborating entity "motion" for hierarchy "motion:inst_motion_controller" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 100
+Warning (10036): Verilog HDL or VHDL warning at motion.vhd(29): object "coordinate_queued" assigned a value but never read File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at motion.vhd(119): signal "x_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 119
+Warning (10492): VHDL Process Statement warning at motion.vhd(120): signal "y_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 120
+Warning (10492): VHDL Process Statement warning at motion.vhd(146): signal "x_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 146
+Warning (10492): VHDL Process Statement warning at motion.vhd(147): signal "y_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 147
+Warning (10492): VHDL Process Statement warning at motion.vhd(152): signal "sys_fault" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 152
+Warning (10631): VHDL Process Statement warning at motion.vhd(92): inferring latch(es) for signal or variable "x_tgt", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Warning (10631): VHDL Process Statement warning at motion.vhd(92): inferring latch(es) for signal or variable "y_tgt", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Warning (10631): VHDL Process Statement warning at motion.vhd(92): inferring latch(es) for signal or variable "x_que", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Warning (10631): VHDL Process Statement warning at motion.vhd(92): inferring latch(es) for signal or variable "y_que", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Warning (10631): VHDL Process Statement warning at motion.vhd(92): inferring latch(es) for signal or variable "en_x", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Warning (10631): VHDL Process Statement warning at motion.vhd(92): inferring latch(es) for signal or variable "en_y", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Warning (10631): VHDL Process Statement warning at motion.vhd(92): inferring latch(es) for signal or variable "sys_fault", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Warning (10631): VHDL Process Statement warning at motion.vhd(92): inferring latch(es) for signal or variable "en_ext", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Warning (10631): VHDL Process Statement warning at motion.vhd(92): inferring latch(es) for signal or variable "back_to_idle", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "back_to_idle" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "en_ext" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "sys_fault" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "y_que[0]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "y_que[1]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "y_que[2]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "y_que[3]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "x_que[0]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "x_que[1]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "x_que[2]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "x_que[3]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "y_tgt[0]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "y_tgt[1]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "y_tgt[2]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "y_tgt[3]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "x_tgt[0]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "x_tgt[1]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "x_tgt[2]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (10041): Inferred latch for "x_tgt[3]" at motion.vhd(92) File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 92
+Info (12128): Elaborating entity "Compx4" for hierarchy "Compx4:inst_compare_x" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 115
+Info (12128): Elaborating entity "Compx1" for hierarchy "Compx4:inst_compare_x|Compx1:inst0" File: C:/Documents/ECE124/Lab4_constructed/Compx4.vhd Line: 26
+Info (12128): Elaborating entity "U_D_Bin_Counter4bit" for hierarchy "U_D_Bin_Counter4bit:inst_counter_x" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 127
+Warning (10492): VHDL Process Statement warning at U_D_Bin_Counter4bit.vhd(27): signal "ud_bin_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/U_D_Bin_Counter4bit.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at U_D_Bin_Counter4bit.vhd(30): signal "ud_bin_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/U_D_Bin_Counter4bit.vhd Line: 30
+Info (12128): Elaborating entity "extend" for hierarchy "extend:inst_extension_controller" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 150
+Warning (10036): Verilog HDL or VHDL warning at extend.vhd(20): object "tgt_pos" assigned a value but never read File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at extend.vhd(42): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 42
+Warning (10492): VHDL Process Statement warning at extend.vhd(55): signal "ext_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 55
+Warning (10492): VHDL Process Statement warning at extend.vhd(62): signal "ext_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 62
+Warning (10492): VHDL Process Statement warning at extend.vhd(78): signal "ext_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at extend.vhd(83): signal "ext_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 83
+Warning (10631): VHDL Process Statement warning at extend.vhd(39): inferring latch(es) for signal or variable "ext_en", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 39
+Warning (10631): VHDL Process Statement warning at extend.vhd(39): inferring latch(es) for signal or variable "ext_shift", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 39
+Warning (10631): VHDL Process Statement warning at extend.vhd(39): inferring latch(es) for signal or variable "grapple", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 39
+Warning (10631): VHDL Process Statement warning at extend.vhd(39): inferring latch(es) for signal or variable "ext_stat", which holds its previous value in one or more paths through the process File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 39
+Info (10041): Inferred latch for "ext_stat" at extend.vhd(39) File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 39
+Info (10041): Inferred latch for "grapple" at extend.vhd(39) File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 39
+Info (10041): Inferred latch for "ext_shift" at extend.vhd(39) File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 39
+Info (10041): Inferred latch for "ext_en" at extend.vhd(39) File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 39
+Info (12128): Elaborating entity "shift_reg_4bit" for hierarchy "shift_reg_4bit:inst_extend_shifter" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 163
+Warning (10492): VHDL Process Statement warning at shift_reg_4bit.vhd(30): signal "CLK_EN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/shift_reg_4bit.vhd Line: 30
+Info (12128): Elaborating entity "grapple" for hierarchy "grapple:inst_grapple_controller" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 176
+Warning (10492): VHDL Process Statement warning at grapple.vhd(38): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Documents/ECE124/Lab4_constructed/grapple.vhd Line: 38
+Warning (13012): Latch extend:inst_extension_controller|ext_shift has unsafe behavior File: C:/Documents/ECE124/Lab4_constructed/extend.vhd Line: 39
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal rst_n File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 9
+Warning (13012): Latch motion:inst_motion_controller|back_to_idle has unsafe behavior File: C:/Documents/ECE124/Lab4_constructed/motion.vhd Line: 30
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal rst_n File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 9
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "leds[2]" is stuck at GND File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 13
+    Warning (13410): Pin "leds[2]" is stuck at GND File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "pb[3]" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 11
+    Warning (15610): No output dependent on input pin "pb[3]" File: C:/Documents/ECE124/Lab4_constructed/LogicalStep_Lab4_top.vhd Line: 10
 Info (21057): Implemented 111 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 16 output pins
     Info (21061): Implemented 81 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
     Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Wed Jul 29 13:00:34 2020
-    Info: Elapsed time: 00:00:09
+    Info: Processing ended: Sun Aug 09 14:30:58 2020
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:16
 
 

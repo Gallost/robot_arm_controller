@@ -1,0 +1,201 @@
+-- Group 3, Adrian Salvador & Harry He --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+entity motion is port
+	(
+		clock, reset					: in std_logic;
+		button_in, status_ext		: in std_logic;
+		x_eq, x_gt, x_lt				: in std_logic;
+		y_eq, y_gt, y_lt				: in std_logic;
+		x_input, y_input				: in std_logic_vector(3 downto 0);
+		
+		x_tgt_out, y_tgt_out 		: out std_logic_vector(3 downto 0);
+		enable_ext						: out std_logic;
+		enable_x_out, enable_y_out	: out std_logic;
+		updown_x_out, updown_y_out : out std_logic;
+		system_fault, coordinate_q	: out std_logic;
+		clicked, st_i, st_m			: out std_logic
+	);
+end entity;
+
+architecture coordinates of motion is
+
+type states is (idle, moving);
+signal current_state, next_state				: states;
+
+signal en_ext, sys_fault						: std_logic;
+signal en_x, en_y									: std_logic;
+signal x_tgt, y_tgt, x_que, y_que			: std_logic_vector(3 downto 0);
+signal button, r0, r1							: std_logic;
+signal coordinate_queued						: std_logic;
+signal back_to_idle								: std_logic;
+
+
+begin
+
+-- DETECTING FALLING EDGE OF BUTTON_INPUT
+button_detector: process (clock, reset) begin
+
+	if (reset = '0') then
+		r0			<= '0';
+		r1			<= '0';
+	elsif (rising_edge(clock)) then
+		r0			<= button_in;
+		r1			<= r0;
+	end if;
+
+end process;
+button	<= NOT(r0) AND r1;
+		
+-- UPDATING MACHINE STATE
+register_section: process (clock, reset) begin
+
+	if (reset = '0') then
+		current_state <= idle;
+	elsif (rising_edge(clock)) then
+		current_state <= next_state;
+	end if;
+	
+end process;
+
+-- CHANGING STATES CONDITIONS
+transition_section: process 
+	(
+		current_state, button,
+		x_que, x_tgt, y_que, y_tgt,
+		x_eq, y_eq
+	) 
+begin
+
+	case current_state is
+	
+		when idle =>
+			en_ext	<= '1';
+			
+			if (button = '1') then
+				next_state	<= moving;
+			else
+				next_state	<= idle;
+			end if;
+		
+		when moving =>
+			en_ext	<= '0';
+			
+			if (back_to_idle = '1') then
+				next_state	<= idle;
+			else
+				next_state	<= moving;
+			end if;
+
+	end case;
+
+end process;
+
+
+decoder_section: process 
+	(
+		button, current_state, status_ext,
+		x_eq, x_gt, x_lt, x_tgt, x_que, en_x,
+		y_eq, y_gt, y_lt, y_tgt, y_que, en_y
+	) 
+begin
+
+if (reset = '0') then
+	x_tgt					<= "0000";
+	y_tgt 				<= "0000";
+	x_que 				<= "0000";
+	y_que 				<= "0000";
+	en_x					<= '0';
+	en_y					<= '0';
+	sys_fault			<= '0';
+	coordinate_queued	<= '0';
+	
+else
+
+	case current_state is
+	
+		when idle =>
+		-- REGISTERING INPUT TO QUEUE WHEN BUTTON IS PRESSED, AND ACTIVATING U/D
+			if (button = '1') then
+				x_que	<= x_input;
+				y_que	<= y_input;
+				en_x	<= '1';
+				en_y	<= '1';
+				coordinate_queued	<= '1';
+			else
+				x_que	<= x_que;
+				y_que	<= y_que;
+				en_x	<= '0';
+				en_y	<= '0';
+				coordinate_queued	<= '0';
+			end if;
+		
+		when moving =>
+		-- REGISTERING QUEUE TO TARGET IF CURRENT LOCATION EQUALS TARGET LOCATION
+		-- WHEN BUTTON IS PRESSED, IF CURRENT != TARGET LOCATION (MOVING), INPUT REGISTERED TO QUEUE
+			if ((x_eq = '1') AND (y_eq = '1')) then
+				x_tgt	<= x_que;
+				y_tgt	<= y_que;
+				x_que	<= x_que;
+				y_que	<= y_que;
+				coordinate_queued	<= '0';
+			elsif (button = '1') then
+				x_tgt	<= x_tgt;
+				y_tgt	<= y_tgt;
+				x_que	<= x_input;
+				y_que	<= y_input;
+				coordinate_queued	<= '1';
+			end if; 
+		
+		-- STOPPING MOTION IN X/Y WHEN THEY MEET THE TARGET
+
+			
+		-- GOING BACK TO IDLE
+			if ((en_x = '0') AND (en_y = '0') AND (sys_fault <= '0')) then
+				back_to_idle	<= '1';
+			else
+				back_to_idle	<= '0';
+			end if;
+			
+		-- CATCHING SYSTEM FAULT	
+			if (status_ext = '1') then
+				sys_fault	<= '1';
+				en_x			<= '0';
+				en_y			<= '0';
+			elsif (status_ext = '0') then
+				sys_fault	<= '0';
+		-- STOPPING X/Y WHEN THEY REACH THE TARGET
+				if (x_eq = '1') then
+					en_x	<= '0';
+				else
+					en_x	<= '1';
+				end if;
+				
+				if (y_eq = '1') then
+					en_y	<= '0';
+				else
+					en_y	<= '1';
+				end if;
+				
+			end if;
+			
+	end case;
+	
+end if;
+	
+end process;
+
+x_tgt_out		<= x_tgt;
+y_tgt_out		<= y_tgt;
+enable_ext		<= en_ext;
+enable_x_out	<= en_x;
+enable_y_out	<= en_y;
+updown_x_out	<= x_gt;
+updown_y_out	<= y_gt;
+system_fault	<= sys_fault;
+coordinate_q	<= coordinate_queued;
+clicked			<= button;
+
+end;

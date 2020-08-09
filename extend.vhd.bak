@@ -1,0 +1,122 @@
+-- Group 3, Adrian Salvador & Harry He --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+entity extend is port
+	(
+		clock, reset,
+		enable, button		: in std_logic;
+		ext_pos				: in std_logic_vector(3 downto 0);
+		status, grp_en,
+		ext_shift_out, 
+		ext_en_out			: out std_logic;
+		position,
+		target				: out std_logic_vector(3 downto 0)	
+	);
+end extend;
+
+architecture arm of extend is
+
+type states is (retracted, moving, protracted);
+signal current_state, next_state					: states;
+signal ext_stat, ext_shift, ext_en, grapple	: std_logic;
+signal tgt_pos											: std_logic_vector(3 downto 0);
+
+
+begin
+
+register_section: process (clock, reset) begin
+
+	if (reset = '0') then
+		current_state <= retracted;
+	elsif (rising_edge(clock)) then
+		current_state <= next_state;
+	end if;
+	
+end process;
+
+transition_section: process (current_state, tgt_pos, ext_pos) begin
+
+	case current_state is
+		
+		when retracted =>
+			if (NOT(ext_pos = tgt_pos)) then
+				if (enable = '1') then
+					next_state <= moving;
+				else
+					next_state <= retracted;
+				end if;
+			end if;
+		
+		when moving =>
+			if (ext_pos = tgt_pos) then
+				if (ext_pos = "0000") then
+					next_state <= retracted;
+				elsif (ext_pos = "1111") then
+					next_state <= protracted;
+				end if;
+			else
+					next_state <= moving;
+			end if;
+		
+		when protracted =>
+			if (NOT(ext_pos = tgt_pos)) then
+					next_state <= moving;
+			else
+					next_state <= protracted;
+			end if;
+		
+		when others =>
+					next_state <= retracted;
+			
+	end case;
+
+end process;
+
+decoder_section: process (button) begin
+	
+	if (reset = '0') then
+			tgt_pos 		<= "0000";
+			ext_en 		<= '0';
+			ext_shift 	<= '0';
+	
+	elsif (falling_edge(button)) then
+	
+		if (ext_pos = "0000") then
+			tgt_pos		<= "1111";
+			ext_en		<= '1';
+			ext_shift	<= '1';
+		elsif (ext_pos = "1111") then
+			tgt_pos		<= "0000";
+			ext_en		<= '1';
+			ext_shift	<= '0';
+		end if;
+		
+	end if;
+	
+	if (reset = '0') then
+		grapple <= '0';
+		ext_stat <= '0';
+	
+	elsif (NOT(ext_pos = "0000")) then
+		ext_stat	<= '1';
+		if (ext_pos = "1111") then
+			grapple <= '1';
+		else
+			grapple <= '0';
+		end if;
+	else
+		ext_stat <= '0';
+	end if;
+
+end process;
+
+status <= ext_stat;
+grp_en <= grapple;
+ext_shift_out <= ext_shift;
+ext_en_out <= (ext_en AND enable);
+target <= tgt_pos;
+position <= ext_pos;
+
+end;

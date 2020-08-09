@@ -1,0 +1,38 @@
+-- Group 3, Adrian Salvador & Harry He --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+entity grapple is port
+	(
+		reset,
+		enable, button	: in std_logic;
+		status			: out std_logic
+	);
+end grapple;
+
+architecture grappler of grapple is
+
+signal grp_stat	: std_logic;
+
+begin
+
+process (button, reset) begin
+
+	if (reset = '0') then
+		grp_stat <= '0';
+	elsif (falling_edge(button)) then
+		if (enable = '1') then
+			if (grp_stat <= '0') then
+				grp_stat <= '1';
+			elsif (grp_stat <= '1') then
+				grp_stat <= '0';
+			end if;
+		end if;
+	end if;
+		
+end process;
+
+status <= grp_stat;
+
+end grappler;

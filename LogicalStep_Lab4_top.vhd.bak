@@ -1,0 +1,194 @@
+-- Group 3, Adrian Salvador & Harry He --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+ENTITY LogicalStep_Lab4_top IS
+   PORT
+	(
+		Clk				: in	std_logic;
+		rst_n				: in	std_logic;
+		pb					: in	std_logic_vector(3 downto 0);
+		sw   				: in  std_logic_vector(7 downto 0); 
+		leds				: out std_logic_vector(15 downto 0);
+		tgt_x, tgt_y	: out std_logic_vector(3 downto 0);
+		target_eq_x, target_gt_x, target_lt_x	: out std_logic;
+		target_eq_y, target_gt_y, target_lt_y	: out std_logic;
+		queue, click	: out std_logic
+	);
+END LogicalStep_Lab4_top;
+
+ARCHITECTURE Circuit OF LogicalStep_Lab4_top IS
+
+
+--component U_D_Bin_Counter4bit port
+--	(
+--		CLK				: in std_logic;
+--		RESET_n			: in std_logic;
+--		CLK_EN			: in std_logic;
+--		UP1_DOWN0		: in std_logic;
+--		COUNTER_BITS	: out std_logic_vector(3 downto 0)	
+--	);
+--end component;
+--
+--component Compx4 port
+--	(
+--		inA_4bit, inB_4bit					: in std_logic_vector(3 downto 0);
+--		aeqb_4bit, agtb_4bit, altb_4bit	: out std_logic		
+--	);
+--end component;
+--	
+--component motion port
+--	(
+--		clock, reset					: in std_logic;
+--		button_in, status_ext		: in std_logic;
+--		x_eq, x_gt, x_lt				: in std_logic;
+--		y_eq, y_gt, y_lt				: in std_logic;
+--		x_input, y_input				: in std_logic_vector(3 downto 0);
+--		
+--		x_tgt_out, y_tgt_out 		: out std_logic_vector(3 downto 0);
+--		enable_ext						: out std_logic;
+--		enable_x_out, enable_y_out	: out std_logic;
+--		updown_x_out, updown_y_out : out std_logic;
+--		system_fault, coordinate_q	: out std_logic;
+--		clicked							: out std_logic
+--	);
+--end component;
+--
+--signal x_en, y_en, x_UD, y_UD : std_logic;
+--signal x_teqc, x_tgtc, x_tltc	: std_logic;
+--signal y_teqc, y_tgtc, y_tltc	: std_logic;
+--signal x_position, y_position : std_logic_vector(3 downto 0);
+--signal x_target, y_target		: std_logic_vector(3 downto 0);
+
+--component extend port
+--	(
+--		clock, reset,
+--		enable, button		: in std_logic;
+--		ext_pos				: in std_logic_vector(3 downto 0);
+--		status, grp_en,
+--		ext_shift_out, 
+--		ext_en_out			: out std_logic;
+--		position,
+--		target				: out std_logic_vector(3 downto 0)	
+--	);
+--end component;
+--
+--component shift_reg_4bit port 
+--	(
+--		CLK				: in std_logic := '0';
+--		RESET_n			: in std_logic := '0';
+--		CLK_EN			: in std_logic := '0';
+--		LEFT0_RIGHT1	: in std_logic := '0';
+--		REG_BITS			: out std_logic_vector(3 downto 0)	
+--	);
+--end component;
+--
+--signal extension_position	: std_logic_vector(3 downto 0);
+--signal arm_up_down, extension_enable	: std_logic;
+	
+component grapple port
+	(
+		reset,
+		enable, button	: in std_logic;
+		status			: out std_logic	
+	);
+end component;
+
+BEGIN
+		
+inst: grapple port map
+	(
+		rst_n,
+		pb(0), pb(1),
+		leds(1)
+	);
+		
+--inst: shift_reg_4bit port map
+--	(
+--		clk,			
+--		rst_n,		
+--		extension_enable,		
+--		arm_up_down,
+--		extension_position		
+--	);
+--
+--leds(3) <= extension_enable;
+--leds(4) <= arm_up_down;
+--	
+--inst_ext: extend port map
+--	(
+--		clk, rst_n,
+--		pb(0), pb(1),
+--		extension_position,
+--		leds(2), leds(1),
+--		arm_up_down,
+--		extension_enable,
+--		leds(11 downto 8),
+--		leds(15 downto 12)
+--	);
+	
+--leds(15 downto 12) <= x_position;
+--leds(11 downto 8) <= y_position;
+--leds(3) <= x_en;
+--leds(4) <= y_en;
+--leds(5) <= x_UD;
+--leds(6) <= y_UD;
+--tgt_x <= x_target;
+--tgt_y <= y_target;
+--target_eq_x <= x_teqc;
+--target_gt_x <= x_tgtc;
+--target_lt_x <= x_tltc;
+--target_eq_y <= y_teqc;
+--target_gt_y <= y_tgtc;
+--target_lt_y <= y_tltc;
+--
+--inst_motion: motion port map
+--	(
+--		clk, rst_n,
+--		pb(2), pb(0),
+--		x_teqc, x_tgtc, x_tltc,
+--		y_teqc, y_tgtc, y_tltc,
+--		sw(7 downto 4), sw(3 downto 0),
+--		
+--		x_target, y_target,
+--		leds(1),
+--		x_en, y_en,
+--		x_UD, y_UD,
+--		leds(0), queue,
+--		click
+--	);
+--
+--compare_x: Compx4 port map
+--	(
+--		x_target, x_position,
+--		x_teqc, x_tgtc, x_tltc 
+--	);
+--
+--compare_y: Compx4 port map
+--	(
+--		y_target, y_position,
+--		y_teqc, y_tgtc, y_tltc 
+--	);
+--	
+--counter_x: U_D_Bin_Counter4bit port map
+--	(
+--		clk,
+--		rst_n,
+--		x_en,
+--		x_UD,
+--		x_position
+--	);
+--	
+--counter_y: U_D_Bin_Counter4bit port map
+--	(
+--		clk,
+--		rst_n,
+--		y_en,
+--		y_UD,
+--		y_position
+--	);
+
+
+	
+END Circuit;

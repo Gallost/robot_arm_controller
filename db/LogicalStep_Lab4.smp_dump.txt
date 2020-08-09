@@ -1,6 +1,0 @@
-
-State Machine - |LogicalStep_Lab4_top|extend:inst_extension_controller|current_state
-Name current_state.protracted current_state.moving current_state.retracted 
-current_state.retracted 0 0 0 
-current_state.moving 0 1 1 
-current_state.protracted 1 0 1 

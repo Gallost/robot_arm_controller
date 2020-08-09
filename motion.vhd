@@ -1,4 +1,3 @@
--- Group 3, Adrian Salvador & Harry He --
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
@@ -10,7 +9,7 @@ entity motion is port
 		x_eq, x_gt, x_lt				: in std_logic;
 		y_eq, y_gt, y_lt				: in std_logic;
 		x_input, y_input				: in std_logic_vector(3 downto 0);
-		
+
 		x_tgt_out, y_tgt_out 		: out std_logic_vector(3 downto 0);
 		enable_ext						: out std_logic;
 		enable_x_out, enable_y_out	: out std_logic;
@@ -47,7 +46,7 @@ button_detector: process (clock, reset) begin
 
 end process;
 button	<= NOT(r0) AND r1;
-		
+
 -- UPDATING MACHINE STATE
 register_section: process (clock, reset) begin
 
@@ -56,32 +55,32 @@ register_section: process (clock, reset) begin
 	elsif (rising_edge(clock)) then
 		current_state <= next_state;
 	end if;
-	
+
 end process;
 
 -- CHANGING STATES CONDITIONS
-transition_section: process 
+transition_section: process
 	(
 		current_state, button, back_to_idle
-	) 
+	)
 begin
 
 	case current_state is
-	
+
 		when idle =>
 			if (button = '1') then
 				next_state	<= moving;
 			else
 				next_state	<= idle;
 			end if;
-		
+
 		when moving =>
 			if (back_to_idle = '1') then
 				next_state	<= idle;
 			else
 				next_state	<= moving;
 			end if;
-		
+
 		when others =>
 			next_state	<= idle;
 
@@ -90,12 +89,12 @@ begin
 end process;
 
 
-decoder_section: process 
+decoder_section: process
 	(
 		reset, button, current_state, status_ext,
 		x_eq, x_gt, x_lt, x_tgt, x_que, en_x,
 		y_eq, y_gt, y_lt, y_tgt, y_que, en_y
-	) 
+	)
 begin
 
 if (reset = '0') then
@@ -107,14 +106,14 @@ if (reset = '0') then
 	en_y					<= '0';
 	sys_fault			<= '0';
 	coordinate_queued	<= '0';
-	
+
 else
 
 	case current_state is
-	
+
 		when idle =>
 			en_ext	<= '1';
-		
+
 		-- REGISTERING INPUT TO QUEUE WHEN BUTTON IS PRESSED, AND ACTIVATING U/D
 			if (button = '1') then
 				x_que	<= x_input;
@@ -129,10 +128,10 @@ else
 				en_y	<= '0';
 				coordinate_queued	<= '0';
 			end if;
-		
+
 		when moving =>
 			en_ext	<= '0';
-		
+
 		-- REGISTERING QUEUE TO TARGET IF CURRENT LOCATION EQUALS TARGET LOCATION
 		-- WHEN BUTTON IS PRESSED, IF CURRENT != TARGET LOCATION (MOVING), INPUT REGISTERED TO QUEUE
 			if ((x_eq = '1') AND (y_eq = '1')) then
@@ -148,15 +147,15 @@ else
 				y_que	<= y_input;
 				coordinate_queued	<= '1';
 			end if;
-			
+
 		-- GOING BACK TO IDLE
 			if ((en_x = '0') AND (en_y = '0') AND (sys_fault = '0')) then
 				back_to_idle	<= '1';
 			else
 				back_to_idle	<= '0';
 			end if;
-			
-		-- CATCHING SYSTEM FAULT	
+
+		-- CATCHING SYSTEM FAULT
 			if (status_ext = '1') then
 				sys_fault	<= '1';
 				en_x			<= '0';
@@ -169,22 +168,22 @@ else
 				else
 					en_x	<= '1';
 				end if;
-				
+
 				if (y_eq = '1') then
 					en_y	<= '0';
 				else
 					en_y	<= '1';
 				end if;
-				
+
 			end if;
-			
+
 	end case;
-	
+
 end if;
-	
+
 end process;
 
-x_tgt_out		<= x_tgt;			-- Outputting 
+x_tgt_out		<= x_tgt;			-- Outputting
 y_tgt_out		<= y_tgt;
 enable_ext		<= en_ext;
 enable_x_out	<= en_x;

@@ -1,4 +1,3 @@
--- Group 3, Harry He & Salvador --
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -17,8 +16,8 @@ end full_adder_4bit;
 architecture Circuit of full_adder_4bit is
 
 -- Declare any Components to be Used ---
-------------------------------------------------------------------- 
- 
+-------------------------------------------------------------------
+
 component full_adder_1bit
  	port (
 			cin, bit_val1, bit_val2 	: in std_logic;
@@ -40,13 +39,13 @@ end component;
 begin
 
 adder0: full_adder_1bit port map (cin, hex_val_A(0), hex_val_B(0), hex_sum(0), cout(0));
-											
+
 adder1: full_adder_1bit port map (cout(0), hex_val_A(1), hex_val_B(1), hex_sum(1), cout(1));
-											
+
 adder2: full_adder_1bit port map (cout(1), hex_val_A(2), hex_val_B(2), hex_sum(2), cout(2));
-											
+
 adder3: full_adder_1bit port map (cout(2), hex_val_A(3), hex_val_B(3), hex_sum(3), cout(3));
-											
+
 carry_out <= cout(3);
 
 end circuit;

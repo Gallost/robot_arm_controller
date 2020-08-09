@@ -56,7 +56,7 @@ R14
 R15
 R16
 Elogicalstep_lab4_top
-Z17 w1596046674
+Z17 w1596996862
 R3
 R7
 R2
@@ -74,9 +74,9 @@ Vzzjz;IY_D8XiK11l>zaD82
 !s100 @^?84acCNhl>XXJk7Aa^I2
 R10
 32
-!s110 1596046674
+Z21 !s110 1596996864
 !i10b 1
-Z21 !s108 1596046674.000000
+Z22 !s108 1596996864.000000
 R13
 R14
 !i113 1
@@ -98,16 +98,16 @@ VU9=58VRWOTS32L2jXoc433
 !s100 lEmiX[[cDjzCLWen:O7jz2
 R10
 32
-Z22 !s110 1596046675
-!i10b 1
 R21
+!i10b 1
+R22
 R13
 R14
 !i113 1
 R15
 R16
 Elogicalstep_lab4_top_vhd_vec_tst
-Z23 w1596046673
+Z23 w1596996861
 R5
 R6
 R20
@@ -119,29 +119,29 @@ VC?l4>S[GXnnoLz0N5hk0O1
 !s100 MHCLOb^9jeSek619`89FV2
 R10
 32
-R22
+R21
 !i10b 1
-Z26 !s108 1596046675.000000
-Z27 !s90 -work|work|Waveform.vwf.vht|
-Z28 !s107 Waveform.vwf.vht|
+R22
+Z26 !s90 -work|work|Waveform.vwf.vht|
+Z27 !s107 Waveform.vwf.vht|
 !i113 1
 R15
 R16
 Alogicalstep_lab4_top_arch
 R5
 R6
-Z29 DEx4 work 32 logicalstep_lab4_top_vhd_vec_tst 0 22 C?l4>S[GXnnoLz0N5hk0O1
+Z28 DEx4 work 32 logicalstep_lab4_top_vhd_vec_tst 0 22 C?l4>S[GXnnoLz0N5hk0O1
 l51
 L34
-VJe>]YA9FAaHchmgLW=6C50
-!s100 fY0JBMP:GO8?0aUlM=zTg2
+Z29 VJe>]YA9FAaHchmgLW=6C50
+Z30 !s100 fY0JBMP:GO8?0aUlM=zTg2
 R10
 32
-R22
+R21
 !i10b 1
+R22
 R26
 R27
-R28
 !i113 1
 R15
 R16

@@ -26,12 +26,10 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Jul 29 14:17:53 2020
+    Info: Processing started: Sun Aug 09 14:14:20 2020
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab4 -c LogicalStep_Lab4_top --vector_source=C:/Documents/ECE124/Lab4_constructed/Waveform.vwf --testbench_file=C:/Documents/ECE124/Lab4_constructed/simulation/qsim/Waveform.vwf.vht
 Info (119006): Selected device 10M08DAF484C8G for design "LogicalStep_Lab4_top"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-
-0:00:01
 
 Completed successfully. 
 
@@ -56,14 +54,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Jul 29 14:17:53 2020
+    Info: Processing started: Sun Aug 09 14:14:21 2020
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Documents/ECE124/Lab4_constructed/simulation/qsim/ LogicalStep_Lab4 -c LogicalStep_Lab4_top
 Info (119006): Selected device 10M08DAF484C8G for design "LogicalStep_Lab4_top"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file LogicalStep_Lab4_top.vho in folder "C:/Documents/ECE124/Lab4_constructed/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4654 megabytes
-    Info: Processing ended: Wed Jul 29 14:17:54 2020
+    Info: Processing ended: Sun Aug 09 14:14:22 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -83,15 +81,18 @@ Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
+
 # do LogicalStep_Lab4.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:17:54 on Jul 29,2020
+# Start time: 14:14:24 on Aug 09,2020
 # vcom -work work LogicalStep_Lab4_top.vho 
+
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
 # -- Loading package dffeas_pack
@@ -100,22 +101,22 @@ Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package fiftyfivenm_components
 # -- Compiling entity LogicalStep_Lab4_top
 # -- Compiling architecture structure of LogicalStep_Lab4_top
-
-# End time: 14:17:55 on Jul 29,2020, Elapsed time: 0:00:01
+# End time: 14:14:24 on Aug 09,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:17:55 on Jul 29,2020
+# Start time: 14:14:24 on Aug 09,2020
 # vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity LogicalStep_Lab4_top_vhd_vec_tst
 # -- Compiling architecture LogicalStep_Lab4_top_arch of LogicalStep_Lab4_top_vhd_vec_tst
-# End time: 14:17:55 on Jul 29,2020, Elapsed time: 0:00:00
+# End time: 14:14:24 on Aug 09,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.LogicalStep_Lab4_top_vhd_vec_tst 
-# Start time: 14:17:55 on Jul 29,2020
+# Start time: 14:14:25 on Aug 09,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -135,7 +136,7 @@ Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
 # Expect performance to be adversely affected.
 # after#33
 
-# End time: 14:17:55 on Jul 29,2020, Elapsed time: 0:00:00
+# End time: 14:14:25 on Aug 09,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
@@ -148,7 +149,7 @@ Reading C:/Documents/ECE124/Lab4_constructed/simulation/qsim/LogicalStep_Lab4.ms
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Documents/ECE124/Lab4_constructed/simulation/qsim/LogicalStep_Lab4_20200729141755.sim.vwf
+Writing the resulting VWF to C:/Documents/ECE124/Lab4_constructed/simulation/qsim/LogicalStep_Lab4_20200809141425.sim.vwf
 
 Finished VCD to VWF conversion.
 

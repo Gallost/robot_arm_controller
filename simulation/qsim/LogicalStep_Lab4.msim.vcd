@@ -3,7 +3,7 @@ $comment
 		vcd file LogicalStep_Lab4.msim.vcd -direction
 $end
 $date
-	Wed Jul 29 14:17:55 2020
+	Sun Aug 09 14:14:25 2020
 $end
 $version
 	ModelSim Version 10.5b
